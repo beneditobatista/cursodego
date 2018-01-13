@@ -1,0 +1,17 @@
+go build
+
+Para compilar no windows e rodar no windows
+
+env GOOS=windows GOARCH=386 go build -o meuapp.exe
+
+Para compilar no windows e rodar no Linux
+
+env GOOS=linux GOARCH=386 go build -o meuapp
+ 
+Para compilar no linux e rodar no windows
+
+GOOS=windows GOARCH=386 go build -o meuapp.exe
+
+Para compilar no linux e rodar no linux
+
+GOOS=linux GOARCH=386 go build -o meuapp
