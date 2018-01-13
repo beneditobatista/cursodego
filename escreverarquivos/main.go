@@ -32,6 +32,8 @@ func main() {
 		return
 	}
 
+	defer arquivoJSON.Close() //fecha o arquivo quando terminar de usar
+
 	escritor := bufio.NewWriter(arquivoJSON)
 	escritor.WriteString("[\r\n")
 	for _, linha := range conteudo {
